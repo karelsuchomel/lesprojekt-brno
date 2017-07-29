@@ -1,0 +1,160 @@
+// animations
+@keyframes showUp
+	from
+		opacity: 0
+		transform: translateY(25px)
+	to
+		opacity: 1
+		transform: translateY(0px)
+
+.showUp-animation-defaults
+	opacity: 0
+	transform: translateY(25px)
+	animation-name: showUp
+	animation-duration: 0.5s
+	animation-fill-mode: forwards
+
+.front-card-container
+	background-color: white
+	position: relative
+	background-repeat: no-repeat
+	background-position: top left
+	padding-top: 1px
+
+	background:
+		position: cover
+
+	.card-content
+		padding: 0px 120px
+
+	.headline-container
+		position: relative
+		padding: 34px 34px 17px
+		display: inline-block
+		// 34 + 68 - 1
+		margin: 81px 0px 34px
+		overflow: hidden
+
+		// animation
+		@extend .showUp-animation-defaults
+
+		.headline-container-bg
+			position: absolute
+			z-index: 0
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			filter: blur(8px)
+			transform: scaleX(1.1) scaleY(1.2) translateX(1%)
+			background:
+				position: -120px -81px
+
+			&:before
+				content: ""
+				display: block
+				position: absolute
+				top: 0
+				right: 0
+				bottom: 0
+				left: 0
+				background-color: rgba(40,118,35,0.2)
+
+	.headline-text
+		position: relative
+		z-index: 1
+		color: white
+
+	span
+		font-size: 22px
+		line-height: 33px
+
+	h1
+		padding-bottom: 34px
+
+		// text
+		font-weight: 800
+		font-size: 44px
+		line-height: 54px
+		text-align: left
+		margin: 0px
+
+	.three-box-container
+		padding-bottom: 48px
+
+		// animation
+		@extend .showUp-animation-defaults
+		animation-delay: 0.15s
+
+		.specialization-box
+			position: relative
+			overflow: hidden
+			padding: 17px 17px 0px
+			width: calc((100% - 96px) / 3 )
+			box-sizing: border-box
+			margin: 34px 48px 34px 0px
+			float: left
+			transition: 0.3s
+			box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,1)
+			cursor: pointer
+
+			&:nth-of-type(3)
+				margin-right: 0px
+
+			.special-box-content
+				position: relative
+				z-index: 1
+
+				h2
+					margin: 0px 0px 17px
+					// text
+					font-weight: 600
+					color: white
+					font-size: 18px
+					line-height: 27px
+					text-align: center
+
+				img
+					border: 1px solid white
+					border-bottom: 0px
+					width: 100%
+					height: auto
+					display: block
+
+			.special-container-bg.first
+				background:
+					position: -120px -330px
+
+			.special-container-bg.second
+				background:
+					position: -484px -330px
+
+			.special-container-bg.third
+				background:
+					position: -847px -330px
+
+			.special-container-bg
+				position: absolute
+				z-index: 0
+				top: 2%
+				right: 0
+				bottom: 0
+				left: 0
+				transform: scaleX(1.1) scaleY(1.2) translateX(1%)
+				filter: blur(8px)
+
+				&:before
+					transition: 0.3s
+					opacity: 1
+					content: ""
+					display: block
+					position: absolute
+					top: 0
+					right: 0
+					bottom: 0
+					left: 0
+					background-color: rgba(75,118,35,0.15)
+
+
+
+@import "front-card-responsive.sass"

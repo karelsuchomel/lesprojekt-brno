@@ -1,0 +1,100 @@
+#post-container
+	font-family: 'Montserrat', sans-serif
+	.post-header
+		position: relative
+		background:
+			size: cover
+			position: center
+		padding-top: 40%
+		box-sizing: border-box
+
+		h1
+			position: absolute
+			bottom: 0
+			padding: 68px 120px
+			width: 100%
+			box-sizing: border-box
+			text-align: center
+
+			// animation
+			//@extend .showUp-animation-defaults
+
+			a
+				// text
+				text-decoration: none
+				font-weight: 600
+				color: white
+				font-size: 64px
+				line-height: 96px
+				text-shadow: 0px 0px 5px rgba(0,0,0,0.25)
+
+			span
+				display: block
+				color: #fefefe
+				font-size: 14px
+				line-height: 21px
+				text-shadow: 0px 0px 5px rgba(0,0,0,0.25)
+
+	.content-text
+		padding: 68px 120px
+		margin-bottom: 68px
+
+		// text
+		font-size: 16px
+		line-height: 24px
+		column-count: 2
+		column-gap: 48px
+
+@media screen and(max-width: 960px)
+	#post-container
+		.post-header
+			padding-top: 50%
+
+			h1
+				padding: 68px 68px
+		.content-text
+			padding: 68px
+
+			// text
+			column-gap: 34px
+
+@media screen and(max-width: 780px)
+	#post-container
+		.post-header
+			padding-top: 60%
+
+			h1
+				padding: 34px 34px
+		.content-text
+			padding: 34px
+
+			// text
+			font-size: 14px
+			line-height: 21px
+			column-gap: 17px
+
+@media screen and(max-width: 640px)
+	#post-container
+		.post-header
+			padding-top: 70%
+
+			h1 a
+				// text
+				font-size: 48px
+				line-height: 76px
+		.content-text
+
+			// text
+			column-count: 1
+			column-gap: 0px
+
+
+@media screen and(max-width: 480px)
+	#post-container
+		.post-header
+			padding-top: 80%
+
+			h1 a
+				// text
+				font-size: 32px
+				line-height: 48px

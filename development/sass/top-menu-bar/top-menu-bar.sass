@@ -1,0 +1,143 @@
+@import '../settings.sass'
+$border-color: #CCC
+
+// for @extend
+.top-bar-menu-item
+	display: block
+	padding: 0px 17px
+
+	// text
+	font-family: 'Open Sans', sans-serif
+	color: #333
+	text-decoration: none
+	text-transform: uppercase
+
+	&:hover
+		transition: 0.2s
+
+#top-menu-bar
+	width: 100%
+	z-index: 2
+	top: 0
+	transition: background 0.2s
+	background: white
+
+.admin-bar #top-menu-bar
+	top: 32px
+
+.menu-content
+	box-shadow: 0px 5px 5px -5px rgba(0,0,0,0.4)
+	max-width: $content-max-width
+	margin: 0 auto
+
+	#home-page-link
+		float: left
+		margin-left: 154px // 120 + 34
+
+		// text
+		color: #3B4323
+		font-size: 14px
+		line-height: 50px
+		font-weight: 700
+		text-decoration: none
+
+#menu-toggle
+	display: none
+
+#show-mobile-menu
+	display: none
+	float: right
+	cursor: pointer
+	margin-right: 14px
+	padding-left: 15px
+
+	line-height: 50px
+	font-size: 14px
+
+	&:hover
+		span
+			color: #3B4323
+		.icon .line
+			transition: 0.2s
+			background: #65743C
+
+	&:active
+		background: #DDD
+
+	.icon
+		width: 25px
+		height: 20px
+		box-sizing: border-box
+		margin: 15px 20px 15px 15px
+		float: right
+		overflow: hidden
+
+		.line
+			width: 100%
+			height: 4px
+			background: #3B4323
+			box-sizing: border-box
+		.line.first
+			margin-left: 6px
+		.line.second
+			margin: 4px 0px
+		.line.third
+			margin-left: 8px
+
+#dimm-background
+	display: none
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	background: rgba(0, 0, 0, 0.85)
+	z-index: 1
+	opacity: 0
+	transition: 0.4s
+
+#menu-top-bar-container
+	display: inline-block
+	float: right
+	margin-right: 137px // 120 + 17 + 17
+
+	ul
+		list-style: none
+		padding: 0px
+		margin: 0px
+
+		&:after
+			content: ""
+			display: table
+			clear: both
+
+		li
+			float: left
+			position: relative
+
+			a
+				@extend .top-bar-menu-item
+				position: relative
+				transition: none !important
+				z-index: 0
+				user-select: none
+				box-shadow: -1px 0px 0px #DDD
+				border-right: 1px solid #DDD
+
+				// text
+				font-weight: 400
+				font-size: 14px
+				line-height: 50px
+
+				&:hover
+					transition: 0.2s
+
+				&:active
+					background: #DDD
+
+		li.current-menu-item
+			&:before
+				transform: scaleX(1)
+			a
+
+@import "top-menu-bar-responsive.sass"

@@ -1,0 +1,140 @@
+.four-boxes
+	display: flex
+	align-items: stretch
+
+	.box
+		color: white
+		height: 620px
+		font-family: 'Montserrat', sans-serif
+		padding-top: 210px
+		box-sizing: border-box
+
+		h2
+			font-weight: 600
+			font-size: 24px
+			line-height: 24px
+			margin: 0px 34px 10px
+
+		p
+			font-weight: 400
+			font-size: 18px
+			line-height: 27px
+			margin: 10px 34px 34px
+
+	.ship
+		background: #84B6E2
+		background:
+			image: url('../images/home-about_gemeinschaft.png')
+			size: 90%
+			position: 0% 0%
+			repeat: no-repeat
+
+	.book
+		background:
+			image: url('../images/about_unterricht.jpg')
+			size: cover
+			position: 88% 50%
+
+	.church
+		background: #84B6E2
+		background:
+			image: url('../images/home-about_mission.png')
+			size: 50%
+			position: 0% 100%
+			repeat: no-repeat
+
+	.cross
+		background:
+			image: url('../images/home_gebet.jpg')
+			size: cover
+			position: 85% 30%
+
+
+@media screen and (max-width: 960px)
+	.four-boxes
+		flex-wrap: wrap
+
+		.box
+			width: 50%
+			height: 500px
+			position: relative
+
+		.box-content
+			position: absolute
+			width: 100%
+			padding: 48px 0px
+			right: 0
+			left: 0
+
+		.ship
+			order: 1
+			padding-top: 0px
+			background:
+				size: 70%
+				position: 35% 0%
+			.box-content
+				bottom: 0
+			p
+				margin-bottom: 0px
+
+		.book
+			padding-top: 180px
+			order: 2
+			p
+				margin-right: 68px
+
+		.cross
+			padding-top: 0px
+			order: 3
+			background:
+				position: 100% 0%
+			.box-content
+				bottom: 0
+			p
+				margin-bottom: 0px
+			
+		.church
+			order: 4
+			padding-top: 0px
+			background:
+				size: 40%
+				position: 30% 100%
+			.box-content
+				top: 0
+
+@media screen and (max-width: 640px)
+	.four-boxes
+		.box
+			width: 100%
+			height: 400px
+
+			p
+				max-width: 400px
+
+		.ship
+			order: 1
+			background:
+				size: 55%
+				position: 40% 0%
+			
+		.book
+			order: 2
+
+		.church
+			order: 3
+			background:
+				size: 28%
+
+		.cross
+			order: 4
+			background:
+				position: 100% 0%
+
+@media screen and (max-width: 460px)
+	.four-boxes
+		.book
+			padding-top: 120px
+
+		.church
+			background:
+				size: 35%

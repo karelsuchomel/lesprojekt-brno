@@ -1,0 +1,87 @@
+.two-boxes
+	display: flex
+	align-items: stretch
+
+	.box
+		widht: 50%
+		box-sizing: border-box
+		padding: 50px
+		font-family: 'Montserrat', sans-serif
+		color: white
+
+		h2
+			font-size: 44px
+			font-weight: 700
+			line-height: 60px
+			margin-bottom: 10px
+			margin-right: 70px
+
+		p
+			font-size: 18px
+			line-height: 30px
+			font-weight: 600
+
+	.box.interessiere
+		background:
+			image: url('../images/teaser_student.jpg')
+			size: cover
+			position: 50% 20%
+
+	.box.blue
+		background: #7EB5DA
+
+	a.two-boxes-button
+		display: inline-block
+		text-decoration: none
+		background: #D3525D
+		border-radius: 3px
+		padding: 16px 34px
+		margin: 34px 0px
+		color: white
+		font-weight: 600
+		cursor: pointer
+		transition: 0.2s
+		font-size: 14px
+
+		&:hover, &:active
+			background: #AF4F4E
+
+@media screen and (max-width: 980px)
+	.two-boxes
+		.box
+			h2
+				font-size: 32px
+				line-height: 38px
+
+			p
+				font-size: 16px
+				line-height: 28px
+
+@media screen and (max-width: 900px)
+	.two-boxes
+		.box
+			padding: 34px
+			h2
+				font-size: 24px
+				line-height: 32px
+				margin-right: 30px
+
+@media screen and (max-width: 730px)
+	.two-boxes
+		.box
+			a.two-boxes-button
+				padding: 14px 24px
+				margin: 17px 0px
+
+@media screen and (max-width: 680px)
+	.two-boxes
+		flex-wrap: wrap
+		.box
+			width: 100%
+
+@media screen and (max-width: 360px)
+	.two-boxes
+		.box
+			a.two-boxes-button
+				padding: 12px 14px
+				margin: 0px

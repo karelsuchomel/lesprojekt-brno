@@ -1,0 +1,104 @@
+@media screen and(max-width: 1180px)
+	.menu-content
+		#home-page-link
+			margin-left: 51px
+
+	#menu-top-bar-container
+		margin-right: 34px // 120 + 17 + 17
+
+@media screen and(max-width: 960px)
+
+@media screen and(max-width: 780px)
+	.menu-content
+		#home-page-link
+			margin-left: 20px
+
+			img
+				height: 40px
+				display: blockx
+
+	#menu-top-bar-container
+		ul li	a
+			padding: 15px 8px
+
+			// text
+			font-size: 14px
+			line-height: 20px
+
+	.admin-bar #top-menu-bar
+		top: 46px
+
+@media screen and(max-width: 720px)
+	#top-menu-bar
+		position: relative
+
+	.admin-bar #top-menu-bar
+		top: 0px
+
+	#content
+		margin-top: 0px
+
+	.menu-content
+		#home-page-link
+			margin-left: 34px
+
+			img
+				height: 40px
+				display: blockx
+
+	@keyframes slide-in
+		0%
+			transform: translateX(100%)
+		100%
+			transform: translateX(0%)
+
+	@keyframes slide-out
+		0%
+			transform: translateX(0%)
+		100%
+			transform: translateX(100%)
+
+	.admin-bar #menu-top-bar-container
+		top: 96px
+
+	#menu-top-bar-container
+		position: fixed
+		top: 50px
+		left: 0px
+		right: 0px
+		margin-right: 0px
+		z-index: 3
+		background: white
+		transform: translateX(100%)
+
+		ul 
+			li
+				dispaly: block
+				float: none
+
+				&:hover, &:active
+					&:before
+						transition: 0s
+
+				a
+					padding: 15px 8px
+					padding-left: 34px
+
+					// text
+					font-size: 14px
+					line-height: 20px
+
+			li.current-menu-item
+				a
+					background: lighten(#af4f4e, 45%)
+					color: #af4f4e
+
+	#menu-toggle
+		&:checked ~ #menu-top-bar-container
+			animation-name: slide-in
+			animation-duration: 0.5s
+			animation-fill-mode: forwards
+			transform: translateX(100%)
+
+	#show-mobile-menu
+		display: block
