@@ -1,6 +1,6 @@
 <?php
 // import stylesheet
-function esm_altoetting_scripts () {
+function lesprojekt_brno_scripts () {
 	wp_enqueue_style( 'style.css', get_stylesheet_uri() );
 
 	wp_register_style('main.css', get_template_directory_uri() . '/assets/css/main.css', false, NULL, 'all' );
@@ -15,10 +15,10 @@ function esm_altoetting_scripts () {
 }
 
 // so the previous code actualy runs
-add_action('wp_enqueue_scripts', 'esm_altoetting_scripts');
+add_action('wp_enqueue_scripts', 'lesprojekt_brno_scripts');
 
 // theme setup
-function esm_altoetting_theme_setup(){
+function lesprojekt_brno_theme_setup(){
 
 	// navigation menus
 	register_nav_menus(array(
@@ -34,7 +34,7 @@ function esm_altoetting_theme_setup(){
 	add_theme_support( 'customize-selective-refresh-widgets' );
 }
 
-add_action('after_setup_theme', 'esm_altoetting_theme_setup');
+add_action('after_setup_theme', 'lesprojekt_brno_theme_setup');
 
 // custom settings
 require_once('inc/custom-settings.php');

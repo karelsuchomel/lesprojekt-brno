@@ -4,7 +4,7 @@
 			<div class="headline-text">
 				<span>Taxační kancelář</span>
 				<h1>
-					<?php echo get_theme_mod('esm-home-page-gradient-card-headline'); ?>
+					<?php echo get_theme_mod('lsp-home-page-gradient-card-headline'); ?>
 				</h1>
 			</div>
 			<div class="headline-container-bg" style="background-image: url('<?php echo get_bloginfo('template_url'); ?>/assets/images/tree-trunk-bg-minified.jpg');"></div>

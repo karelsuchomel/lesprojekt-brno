@@ -3,7 +3,7 @@
 // Controls (UI in appearance -> customize)
 // Settings (save to Database)
 // Sections (Groups)
-function present_idea_theme_customize_register($wp_customize) {
+function lesprojekt_brno_theme_customize_register($wp_customize) {
 
 	$wp_customize->add_setting('prid_base_background_color', array(
 		'default' => '#34495e',
@@ -45,26 +45,20 @@ function present_idea_theme_customize_register($wp_customize) {
 
 }
 
-add_action('customize_register', 'present_idea_theme_customize_register');
+add_action('customize_register', 'lesprojekt_brno_theme_customize_register');
 
 
 
 // Output customize CSS
-function zsh_customize_css() { ?>
+function lsp_customize_css() { ?>
 
 	<style>
 		a {
 			color: <?php echo get_theme_mod('prid_complementary_color'); ?> ;
 		}
-		h1 {
-			color: <?php echo get_theme_mod('prid_complementary_color'); ?> ;
-		}
-		#asside-panel .home-page-link.hover {
-			background-color: <?php echo get_theme_mod('prid_base_background_color'); ?> ;
-		}
 	</style>
 
 <?php }
 
-add_action('wp_head', 'zsh_customize_css');
+add_action('wp_head', 'lsp_customize_css');
 ?>

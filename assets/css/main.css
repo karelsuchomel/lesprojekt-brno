@@ -560,6 +560,8 @@ body {
   position: relative;
   padding: 34px 34px 17px;
   display: inline-block;
+  -webkit-box-shadow: inset 0px 0px 0px 1px white;
+          box-shadow: inset 0px 0px 0px 1px white;
   margin: 81px 0px 34px;
   overflow: hidden;
 }
@@ -619,9 +621,6 @@ body {
           box-sizing: border-box;
   margin: 34px 48px 34px 0px;
   float: left;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
   -webkit-box-shadow: inset 0px 0px 0px 1px white;
           box-shadow: inset 0px 0px 0px 1px white;
   cursor: pointer;
@@ -629,19 +628,32 @@ body {
 .front-card-container .three-box-container .specialization-box:nth-of-type(3) {
   margin-right: 0px;
 }
+.front-card-container .three-box-container .specialization-box:hover .special-box-content img {
+  -webkit-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+          transform: translateY(0px);
+}
 .front-card-container .three-box-container .specialization-box .special-box-content {
   position: relative;
   z-index: 1;
 }
 .front-card-container .three-box-container .specialization-box .special-box-content h2 {
-  margin: 0px 0px 17px;
+  margin: 0px 0px 7px;
   font-weight: 600;
   color: white;
-  font-size: 18px;
-  line-height: 27px;
+  font-size: 14px;
+  line-height: 24px;
   text-align: center;
 }
 .front-card-container .three-box-container .specialization-box .special-box-content img {
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  -o-transition: transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+  -webkit-transform: translateY(10px);
+      -ms-transform: translateY(10px);
+          transform: translateY(10px);
   border: 1px solid white;
   border-bottom: 0px;
   width: 100%;
@@ -685,67 +697,41 @@ body {
   background-color: rgba(75, 118, 35, 0.15);
 }
 
-@media screen and (max-width: 780px) {
-  .home-intro {
-    -webkit-background-size: contain;
-            background-size: contain;
-    background-position: top;
+@media screen and (max-width: 1020px) {
+  .front-card-container .card-content {
+    padding: 0px 50px;
   }
-  .home-intro .card-content {
-    margin-top: -webkit-calc((100vw * 0.66666667));
-    margin-top: calc((100vw * 0.66666667));
-    padding: 30px 50px 40px 50px;
-    background: #2E394B;
-    position: relative;
-  }
-  .home-intro .card-content:after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: -100px;
-    left: 0;
-    right: 0;
-    height: 100px;
-    background: -webkit-gradient(linear, left bottom, left top, from(#2e394b), color-stop(rgba(46, 57, 75, 0.7)), to(rgba(46, 57, 75, 0)));
-    background: -webkit-linear-gradient(bottom, #2e394b, rgba(46, 57, 75, 0.7), rgba(46, 57, 75, 0));
-    background: -o-linear-gradient(bottom, #2e394b, rgba(46, 57, 75, 0.7), rgba(46, 57, 75, 0));
-    background: linear-gradient(0deg, #2e394b, rgba(46, 57, 75, 0.7), rgba(46, 57, 75, 0));
-  }
-  .home-intro p {
-    max-width: 750px;
-  }
-  .home-intro h1 {
-    margin-top: 0px;
+  .front-card-container .headline-container .headline-container-bg {
+    background-position: -60px -81px;
   }
 }
-@media screen and (max-width: 720px) {
-  .home-intro {
-    -webkit-transition: -webkit-transform 0.4s;
-    transition: -webkit-transform 0.4s;
-    -o-transition: transform 0.4s;
-    transition: transform 0.4s;
-    transition: transform 0.4s, -webkit-transform 0.4s;
-    -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-            transform: scale(1);
-    -webkit-transform-origin: center 50vh;
-        -ms-transform-origin: center 50vh;
-            transform-origin: center 50vh;
+@media screen and (max-width: 700px) {
+  .front-card-container .card-content {
+    padding: 0px 34px;
   }
-}
-@media screen and (max-width: 640px) {
-  .home-intro h1 {
-    font-size: 26px;
-    line-height: 34px;
+  .front-card-container .headline-container {
+    padding: 17px;
+    margin: 50px auto 20px;
   }
-  .home-intro .card-content {
-    padding: 34px;
+  .front-card-container .headline-container .headline-container-bg {
+    background-position: -60px -81px;
   }
-}
-@media screen and (max-width: 480px) {
-  .home-intro {
-    -webkit-background-size: contain;
-            background-size: contain;
+  .front-card-container span {
+    font-size: 18px;
+    line-height: 27px;
+  }
+  .front-card-container h1 {
+    padding-bottom: 0px;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 48px;
+  }
+  .front-card-container .three-box-container .specialization-box {
+    width: 100%;
+    max-width: 300px;
+    float: none;
+    margin: 20px auto !important;
+    max-height: 100px;
   }
 }
 .text-card-container {
@@ -775,6 +761,22 @@ body {
   padding: 0px;
 }
 
+@media screen and (max-width: 700px) {
+  .text-card-container {
+    margin: 0px 0px;
+    padding: 20px 17px;
+  }
+  .text-card-container .devider-50-50 {
+    float: none;
+    width: 100%;
+  }
+  .text-card-container .devider-50-50:nth-of-type(1) {
+    padding-right: 0px;
+  }
+  .text-card-container .devider-50-50:nth-of-type(2) {
+    padding-left: 0px;
+  }
+}
 .four-boxes {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1473,7 +1475,11 @@ footer.site-footer .footer-column p {
   margin: 5px 0px;
   color: rgba(255, 255, 255, 0.8);
 }
+footer.site-footer .footer-column p a {
+  color: rgba(255, 255, 255, 0.8);
+}
 footer.site-footer .footer-column p a:hover, footer.site-footer .footer-column p aactive {
+  color: white;
   text-decoration: underline;
   cursor: pointer;
 }
