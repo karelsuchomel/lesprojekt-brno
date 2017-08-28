@@ -1,29 +1,75 @@
 .content-contacts
 	background-color: white
+	display: flex
+	flex-wrap: wrap
 
-	.devider-50-50
-		width: 50%
+	.column-container
+		width: 42%
+		min-width: 512px
 		box-sizing: border-box
-		float: left
 
-	.map-box
+	.column-container#contacts-listing-container
+		width: 58%
+		padding-top: 17px
+		padding-left: 154px
+
+	.map-container
 		position: relative
-		padding-top: 66%
+		padding-top: 85%
 		background:
-			image: url('../images/map-small.png')
+			image: url('../images/map-big.png')
 			position: center
 			size: cover
+
+		&:hover
+			#button-show-map
+				opacity: 1
+				transform: translateX(50%) translateY(0px)
+
+		#button-show-map
+			content: "otevřít mapu"
+			display: block
+			position: absolute
+			bottom: -75px
+			padding: 10px 17px
+			background: white
+			box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.2)
+			right: 50%
+			transform: translateX(50%) translateY(15px)
+			opacity: 0
+			transition: opacity 0.3s, transform 0.3s
+			cursor: pointer
+			color: inherit
+			text-decoration: none
+
+			&:active
+				background: #DDD
 
 		.point-to-loc-box
 			background-color: white
 			position: absolute
-			top: 10%
-			left: 21.5%
-			width: 50%
+			top: 7%
+			right: 120px
+			width: 300px
 			box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.2)
+
+			&:after
+				content: ""
+				position: absolute
+				bottom: -15px
+				right: 50%
+				transform: translateX(50%) rotate(45deg)
+				display: block
+				width: 30px
+				height: 30px
+				background-color: white
+				box-shadow:  1px 1px 5px 0px rgba(0,0,0,0.2)
 
 			.text-content
 				padding: 17px
+				position: relative
+				z-index: 2
+				background: white
 
 			h2
 				font-size: 16px
