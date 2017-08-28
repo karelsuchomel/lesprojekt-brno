@@ -1,0 +1,43 @@
+.content-contacts
+	background-color: white
+
+	.devider-50-50
+		width: 50%
+		box-sizing: border-box
+		float: left
+
+	.map-box
+		position: relative
+		padding-top: 66%
+		background:
+			image: url('../images/map-small.png')
+			position: center
+			size: cover
+
+		.point-to-loc-box
+			background-color: white
+			position: absolute
+			top: 10%
+			left: 21.5%
+			width: 50%
+			box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.2)
+
+			.text-content
+				padding: 17px
+
+			h2
+				font-size: 16px
+				margin: 0px
+				line-height: 24px
+
+			span
+				font-size: 12px
+
+			img
+				max-width: 100%
+				height: auto
+				display: block
+
+	.devider-50-50
+		&:nth-of-type(2)
+			padding: 34px 68px

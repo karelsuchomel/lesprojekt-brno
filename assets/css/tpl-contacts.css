@@ -1,0 +1,45 @@
+.content-contacts {
+  background-color: white;
+}
+.content-contacts .devider-50-50 {
+  width: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  float: left;
+}
+.content-contacts .map-box {
+  position: relative;
+  padding-top: 66%;
+  background-image: url("../images/map-small.png");
+  background-position: center;
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+.content-contacts .map-box .point-to-loc-box {
+  background-color: white;
+  position: absolute;
+  top: 10%;
+  left: 21.5%;
+  width: 50%;
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.2);
+}
+.content-contacts .map-box .point-to-loc-box .text-content {
+  padding: 17px;
+}
+.content-contacts .map-box .point-to-loc-box h2 {
+  font-size: 16px;
+  margin: 0px;
+  line-height: 24px;
+}
+.content-contacts .map-box .point-to-loc-box span {
+  font-size: 12px;
+}
+.content-contacts .map-box .point-to-loc-box img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.content-contacts .devider-50-50:nth-of-type(2) {
+  padding: 34px 68px;
+}

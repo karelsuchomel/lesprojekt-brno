@@ -10,7 +10,7 @@
 
 		// text
 		color: #222
-		font-size: 15px
+		font-size: 14px
 		line-height: 24px
 		box-sizing: border-box
 
@@ -20,19 +20,46 @@
 		&:nth-of-type(2)
 			padding-left: 42px
 
-		h2
+		h2, h3
+			margin: 20px 0px 8px
 
+		p
+			margin: 8px 0px
 
 		ul
 			list-style: none
-			margin: 17px 0px
+			margin: 8px 0px
 			padding: 0px
 
-@media screen and (max-width: 700px)
-	.text-card-container
-		margin: 0px 0px
-		padding: 20px 17px
+			li
+				&:before
+					content: ""
+					display: block
+					float: left
+					height: 16px
+					width: 12px
+					margin-top: 4px
+					margin-right: 8px
+					background:
+						image: url("../images/tree-trunk-list.png")
+						size: contain
+						position: center
+						repeat: no-repeat
 
+@media screen and (max-width: 980px)
+	.text-card-container
+		margin: 20px 34px
+		padding: 20px 34px
+
+		.devider-50-50
+			&:nth-of-type(1)
+				padding-right: 20px
+
+			&:nth-of-type(2)
+				padding-left: 20px
+
+@media screen and (max-width: 880px)
+	.text-card-container
 		.devider-50-50
 			float: none
 			width: 100%
@@ -42,3 +69,10 @@
 
 			&:nth-of-type(2)
 				padding-left: 0px
+
+@media screen and (max-width: 720px)
+	.text-card-container
+		margin: 7px 7px
+		padding: 1px 15px 15px
+
+		.devider-50-50

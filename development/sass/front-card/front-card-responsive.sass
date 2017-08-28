@@ -1,30 +1,40 @@
-@media screen and (max-width: 1180px)
-	.front-card-container
-		.three-box-container .specialization-box
-			//padding: 17px 17px 0px
-			//margin: 34px 48px 34px 0px
-
-@media screen and (max-width: 1020px)
-	.front-card-container
-		.card-content
-			padding: 0px 50px
-
-		.headline-container .headline-container-bg
-			background:
-				position: -60px -81px
-
-@media screen and (max-width: 700px)
-	.front-card-container
+@media screen and (max-width: 980px)
+	.front-card-container 
 		.card-content
 			padding: 0px 34px
+			text-align: center
 		.headline-container
-			padding: 17px
-			// 34 + 68 - 1
-			margin: 50px auto 20px
+			background:
+				position: calc( 287px - 50vw - 0px ) -81px
 
-			.headline-container-bg
+		.specialization-box
+			.special-box-content
+				h2
+
+
+			.special-container-bg.first
 				background:
-					position: -60px -81px
+					position: -120px -330px
+
+			.special-container-bg.second
+				background:
+					position: calc(50vw - 50%) -330px
+
+			.special-container-bg.third
+				background:
+					position: -847px -330px
+
+@media screen and (max-width: 720px)
+	.front-card-container
+		background-position: -220px 0px
+		.card-content
+			padding: 0px 17px
+		.headline-container
+			padding: 34px
+			margin: 34px 0px 17px
+
+			background:
+				position: calc( 241px - 50vw - 220px ) -34px
 
 		span
 			font-size: 18px
@@ -34,14 +44,78 @@
 			padding-bottom: 0px
 
 			// text
+			text-align: center
 			font-weight: 800
 			font-size: 36px
 			line-height: 48px
 
-		.three-box-container .specialization-box
-			width: 100%
-			max-width: 300px
-			float: none
-			margin: 20px auto !important
-			max-height: 100px
+		.three-box-container 
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
 
+			.specialization-box
+				width: 100%
+				max-width: none
+				margin: 5px auto
+				padding: 15px 10px
+
+				.special-box-content
+					h2
+						text-align: center
+						margin: 0px
+
+					img
+						display: none
+
+			.specialization-box.first
+				background:
+					position: -237px -201px
+
+			.specialization-box.second
+				background:
+					position: -237px -267px
+
+			.specialization-box.third
+				background:
+					position: -237px -333px
+
+@media screen and (max-width: 580px)
+	.front-card-container
+		background-size: 860px
+		.card-content
+			padding: 0px 17px
+		.headline-container
+			padding: 34px 17px
+			width: 100%
+			box-sizing: border-box
+
+			background:
+				size: 860px
+				position: -237px -34px
+
+		span
+			font-size: 16px
+			line-height: 24px
+
+		h1
+			font-size: 24px
+			line-height: 30px
+
+		.three-box-container 
+			.specialization-box
+				width: 100%
+				max-width: none
+				background-size: 860px
+
+			.specialization-box.first
+				background:
+					position: -237px -180px
+
+			.specialization-box.second
+				background:
+					position: -237px -247px
+
+			.specialization-box.third
+				background:
+					position: -237px -313px

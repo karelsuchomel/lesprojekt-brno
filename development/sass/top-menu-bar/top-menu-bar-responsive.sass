@@ -6,29 +6,16 @@
 	#menu-top-bar-container
 		margin-right: 34px // 120 + 17 + 17
 
-@media screen and(max-width: 960px)
-
-@media screen and(max-width: 780px)
-	.menu-content
-		#home-page-link
-			margin-left: 20px
-
-			img
-				height: 40px
-				display: blockx
-
+@media screen and(max-width: 920px)
 	#menu-top-bar-container
 		ul li	a
 			padding: 15px 8px
 
 			// text
-			font-size: 14px
+			font-size: 13px
 			line-height: 20px
 
-	.admin-bar #top-menu-bar
-		top: 46px
-
-@media screen and(max-width: 720px)
+@media screen and(max-width: 760px)
 	#top-menu-bar
 		position: relative
 
@@ -40,7 +27,7 @@
 
 	.menu-content
 		#home-page-link
-			margin-left: 34px
+			margin-left: 17px
 
 			img
 				height: 40px
@@ -65,7 +52,7 @@
 		position: fixed
 		top: 50px
 		left: 0px
-		right: 0px
+		right: -1px
 		margin-right: 0px
 		z-index: 3
 		background: white
@@ -90,8 +77,8 @@
 
 			li.current-menu-item
 				a
-					background: lighten(#af4f4e, 45%)
-					color: #af4f4e
+					background: lighten(#3B4323, 45%)
+					color: #3B4323
 
 	#menu-toggle
 		&:checked ~ #menu-top-bar-container
