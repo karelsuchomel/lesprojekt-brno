@@ -5,16 +5,14 @@
 			color: #CCC
 			size: cover
 			position: center
-		padding-top: 40%
 		box-sizing: border-box
 
 		h1
-			position: absolute
 			bottom: 0
-			padding: 68px 120px
+			padding: 54px 154px
 			width: 100%
 			box-sizing: border-box
-			text-align: center
+			margin: 0px
 
 			// animation
 			//@extend .showUp-animation-defaults
@@ -22,10 +20,10 @@
 			a
 				// text
 				text-decoration: none
-				font-weight: 800
+				font-weight: 600
 				color: white
-				font-size: 64px
-				line-height: 96px
+				font-size: 48px
+				line-height: 48px
 
 			span
 				display: block
@@ -34,38 +32,41 @@
 				line-height: 21px
 
 	.content-text
-		padding: 68px 120px
-		margin-bottom: 68px
+		padding: 48px 154px
+		margin-bottom: 34px
 		background-color: white
 
 		// text
 		font-size: 16px
 		line-height: 24px
-		column-count: 2
-		column-gap: 48px
+
+		img
+			max-width: 100%
+			height: auto
 
 @media screen and(max-width: 960px)
 	#post-container
 		.post-header
-			padding-top: 50%
-
 			h1
-				padding: 68px 68px
+				padding: 34px 51px
 		.content-text
-			padding: 68px
+			padding: 34px 51px
 
 			// text
 			column-gap: 34px
 
-@media screen and(max-width: 780px)
+@media screen and(max-width: 760px)
 	#post-container
 		.post-header
-			padding-top: 60%
-
 			h1
-				padding: 34px 34px
+				padding: 34px 17px
+
+				a
+					// text
+					font-size: 32px
+					line-height: 48px
 		.content-text
-			padding: 34px
+			padding: 20px 17px
 
 			// text
 			font-size: 14px
@@ -75,12 +76,7 @@
 @media screen and(max-width: 640px)
 	#post-container
 		.post-header
-			padding-top: 70%
-
 			h1 a
-				// text
-				font-size: 48px
-				line-height: 76px
 		.content-text
 
 			// text
@@ -91,9 +87,5 @@
 @media screen and(max-width: 480px)
 	#post-container
 		.post-header
-			padding-top: 80%
-
 			h1 a
-				// text
-				font-size: 32px
-				line-height: 48px
+				

@@ -1,0 +1,64 @@
+#content
+	background-color: white
+
+.content-examples
+
+#example-items-container
+	padding: 54px 120px
+	.item-wrap
+		width: 30%
+		box-sizing: border-box
+		height: 250px
+		padding: 10px
+		float: left
+		margin-right: 5%
+		margin-bottom: 5%
+		border: 1px solid rgba(0,0,0,0.1)
+		background:
+			size: cover
+			position: center
+
+		&:nth-of-type(3n)
+			margin-right: 0px
+
+		.item-text-field-wrap
+			background-color: rgba(255,255,255,0.9)
+			border: 1px solid black
+			padding: 17px
+			font-size: 14px
+
+			h2
+				margin: 0px
+				margin-bottom: 5px
+				font-size: 18px
+
+@media screen and(max-width: 1180px)
+	#example-items-container
+		padding: 54px 34px
+
+@media screen and(max-width: 1020px)
+	#example-items-container
+		padding: 34px
+
+		.item-wrap
+			width: 47.5%
+
+			&:nth-of-type(3n)
+				margin-right: 5%
+
+			&:nth-of-type(2n)
+				margin-right: 0px
+
+			.item-text-field-wrap
+				h2
+					margin-bottom: 5px
+					font-size: 16px
+
+@media screen and(max-width: 640px)
+	#example-items-container
+		padding: 17px
+		.item-wrap
+			width: 100%
+			margin-right: 0px
+
+@import "tpl-examples-header"

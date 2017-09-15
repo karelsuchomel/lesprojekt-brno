@@ -1,7 +1,7 @@
 <div id="post-container">
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-	<div class="post-header" id="mobile-menu-zoom-el"
+	<div class="post-header"
 	<?php if ( has_post_thumbnail() ) : ?>
 		<?php
 			$postID = get_post();
@@ -16,7 +16,6 @@
 			<a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
 			<?php the_title(); ?>
 			</a>
-			<span><?php the_time('j/F/Y'); ?></span>
 		</h1>
 	</div>
 

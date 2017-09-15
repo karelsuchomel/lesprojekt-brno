@@ -1,21 +1,44 @@
-.content-contacts
+// animations
+@keyframes showUp
+	from
+		opacity: 0
+		transform: translateY(15px)
+	to
+		opacity: 1
+		transform: translateY(0px)
+
+.showUp-animation-defaults
+	opacity: 0
+	transform: translateY(15px)
+	animation-name: showUp
+	animation-duration: 0.5s
+	animation-fill-mode: forwards
+
+#content
 	background-color: white
+
+.content-contacts
 	display: flex
 	flex-wrap: wrap
+	margin: 0 auto
+	max-width: calc(100% - 240px)
 
 	.column-container
 		width: 42%
-		min-width: 512px
 		box-sizing: border-box
 
 	.column-container#contacts-listing-container
 		width: 58%
 		padding-top: 17px
-		padding-left: 154px
+		padding-left: 34px
+
+	.column-container#map-infotable-container
+		padding-top: 17px
 
 	.map-container
 		position: relative
-		padding-top: 85%
+		margin-top: 58px
+		padding-top: 100%
 		background:
 			image: url('../images/map-big.png')
 			position: center
@@ -48,8 +71,9 @@
 		.point-to-loc-box
 			background-color: white
 			position: absolute
-			top: 7%
-			right: 120px
+			top: 5%
+			right: 50%
+			transform: translateX(50%)
 			width: 300px
 			box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.2)
 
@@ -84,6 +108,145 @@
 				height: auto
 				display: block
 
-	.devider-50-50
-		&:nth-of-type(2)
-			padding: 34px 68px
+	.corporate-info-table
+		padding: 17px
+		margin: 34px 0px
+		font-size: 14px
+
+		h2.corporate-info-headline
+			font-size: 16px
+			line-height: 30px
+			margin: 0px
+			text-transform: uppercase
+
+		span
+			color: #444
+			line-height: 21px
+
+		hr
+			border: 0
+			height: 1px
+			background: #DDD
+			margin: 17px 0px
+
+	// contact listing
+	h2.cont-list-headline
+		font-size: 16px
+		line-height: 24px
+		text-transform: uppercase
+		margin: 29px 0px 5px
+
+		// animation
+		@extend .showUp-animation-defaults
+
+	ul
+		list-style: none
+		padding: 0
+		margin: 0px 34px 68px 0px
+
+	.contact-card-wrap
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		font-size: 14px
+		line-height: 21px
+		max-width: 500px
+		padding: 10px 0px
+		border-bottom: 1px solid #DDD
+		background: white 
+		transition: background 0.2s
+
+		.card-col
+			width: calc(50% - 30px)
+			box-sizing: border-box
+			&:nth-of-type(1)			
+				padding-left: 17px
+
+		img
+			border-radius: 50%
+			width: 50px
+			height: auto
+
+		.name-holder
+			font-weight: 600
+
+		.corp-position-holder
+			color: #444
+
+		.email-holder
+			a
+				color: inherit
+				text-decoration: none
+				transition: color 0.2s
+
+				&:hover, &:active
+					color: #3B4323
+
+@media screen and(max-width: 1180px)
+	.content-contacts
+		max-width: calc(100% - 68px)
+
+		.column-container#contacts-listing-container
+			padding-left: 17px
+
+@media screen and(max-width: 920px)
+	.content-contacts
+		.column-container
+			width: 100%
+			max-width: 500px
+			margin: 0 auto
+
+		.column-container#contacts-listing-container
+			width: 100%
+			padding-left: 0px
+			padding-right: 0px
+
+		.column-container#map-infotable-container
+			padding-top: 0px
+			padding-left: 0px
+			padding-right: 0px
+
+		ul
+			margin: 0px
+
+		.map-container #button-show-map
+			transform: translateX(50%) translateY(0px)
+			opacity: 1
+
+
+@media screen and(max-width: 640px)
+	.content-contacts
+		padding: 0px 17px
+		width: 100%
+		box-sizing: border-box
+		max-width: none
+
+		.column-container
+			margin: 0
+
+		h2.cont-list-headline
+			font-size: 14px
+			line-height: 21px
+
+		.contact-card-wrap
+			font-size: 13px
+			line-height: 18px
+			padding: 8px 0px
+
+			.card-col
+				width: calc(50% - 20px)
+				&:nth-of-type(1)			
+					padding-left: 8px
+				&:nth-of-type(2)			
+
+			img
+				width: 40px
+				
+			.email-holder
+				font-size: 12px
+
+@media screen and(max-width: 440px)
+	.content-contacts
+		.map-container
+			margin-top: 34px
+			padding-top: 400px
