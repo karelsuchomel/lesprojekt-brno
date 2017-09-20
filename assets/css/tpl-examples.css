@@ -27,11 +27,27 @@
   border: 1px solid black;
   padding: 17px;
   font-size: 14px;
+  -webkit-transition: height 0.2s;
+  -o-transition: height 0.2s;
+  transition: height 0.2s;
 }
 #example-items-container .item-wrap .item-text-field-wrap h2 {
   margin: 0px;
   margin-bottom: 5px;
   font-size: 18px;
+}
+#example-items-container .item-wrap .item-text-field-wrap .example-details {
+  display: none;
+}
+#example-items-container .item-wrap:hover .item-text-field-wrap, #example-items-container .item-wrap:active .item-text-field-wrap {
+  position: relative;
+  z-index: 100;
+}
+#example-items-container .item-wrap:hover .item-text-field-wrap .example-details, #example-items-container .item-wrap:active .item-text-field-wrap .example-details {
+  display: inline;
+}
+#example-items-container .item-wrap:hover .item-text-field-wrap .example-annotation, #example-items-container .item-wrap:active .item-text-field-wrap .example-annotation {
+  display: none;
 }
 
 @media screen and (max-width: 1180px) {
@@ -116,6 +132,9 @@
 }
 #examples-navigation .examples-button:nth-of-type(3) {
   background-position: -900px -54px;
+}
+#examples-navigation .examples-button.selected:after {
+  opacity: 1;
 }
 
 @media screen and (max-width: 1280px) {

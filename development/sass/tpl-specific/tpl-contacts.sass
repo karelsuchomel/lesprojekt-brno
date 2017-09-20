@@ -159,13 +159,6 @@
 		.card-col
 			width: calc(50% - 30px)
 			box-sizing: border-box
-			&:nth-of-type(1)			
-				padding-left: 17px
-
-		img
-			border-radius: 50%
-			width: 50px
-			height: auto
 
 		.name-holder
 			font-weight: 600
@@ -213,6 +206,9 @@
 			transform: translateX(50%) translateY(0px)
 			opacity: 1
 
+		.corporate-info-table
+			padding: 17px 0px
+
 
 @media screen and(max-width: 640px)
 	.content-contacts
@@ -227,20 +223,16 @@
 		h2.cont-list-headline
 			font-size: 14px
 			line-height: 21px
+			margin-top: 5px
 
 		.contact-card-wrap
 			font-size: 13px
 			line-height: 18px
 			padding: 8px 0px
+			overflow: hidden
 
 			.card-col
-				width: calc(50% - 20px)
-				&:nth-of-type(1)			
-					padding-left: 8px
-				&:nth-of-type(2)			
-
-			img
-				width: 40px
+				width: calc(50% - 20px)	
 				
 			.email-holder
 				font-size: 12px

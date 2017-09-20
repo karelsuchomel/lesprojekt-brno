@@ -1,3 +1,95 @@
+#content {
+  background-color: white;
+}
+
+#example-items-container {
+  padding: 75px 120px;
+}
+#example-items-container .item-wrap {
+  position: relative;
+  width: 30%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 300px;
+  float: left;
+  margin-right: 5%;
+  margin-bottom: 5%;
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-position: center;
+}
+#example-items-container .item-wrap:nth-of-type(3n) {
+  margin-right: 0px;
+}
+#example-items-container .item-wrap .item-text-field-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 17px;
+  font-size: 14px;
+}
+#example-items-container .item-wrap .item-text-field-wrap h2 {
+  margin: 0px;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+#example-items-container .item-wrap .item-text-field-wrap .example-details {
+  display: none;
+}
+#example-items-container .item-wrap img {
+  max-width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: auto;
+  padding: 17px 34px;
+  margin-top: 90px;
+}
+#example-items-container .item-wrap:hover .item-text-field-wrap, #example-items-container .item-wrap:active .item-text-field-wrap {
+  background: rgba(255, 255, 255, 0.85);
+  z-index: 100;
+}
+#example-items-container .item-wrap:hover .item-text-field-wrap .example-details, #example-items-container .item-wrap:active .item-text-field-wrap .example-details {
+  display: inline;
+}
+#example-items-container .item-wrap:hover .item-text-field-wrap .example-annotation, #example-items-container .item-wrap:active .item-text-field-wrap .example-annotation {
+  display: none;
+}
+
+@media screen and (max-width: 1180px) {
+  #example-items-container {
+    padding: 54px 34px;
+  }
+}
+@media screen and (max-width: 1020px) {
+  #example-items-container {
+    padding: 34px;
+  }
+  #example-items-container .item-wrap {
+    width: 47.5%;
+  }
+  #example-items-container .item-wrap:nth-of-type(3n) {
+    margin-right: 5%;
+  }
+  #example-items-container .item-wrap:nth-of-type(2n) {
+    margin-right: 0px;
+  }
+  #example-items-container .item-wrap .item-text-field-wrap h2 {
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 640px) {
+  #example-items-container {
+    padding: 17px;
+  }
+  #example-items-container .item-wrap {
+    width: 100%;
+    margin-right: 0px;
+  }
+}
 #examples-navigation {
   padding: 54px 120px;
   display: -webkit-box;

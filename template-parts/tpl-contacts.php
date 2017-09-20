@@ -27,7 +27,6 @@
 		?>
 
 		<li class="contact-card-wrap">
-			<?php the_post_thumbnail('thumbnail'); ?>
 			<div class="card-col">
 				<div class="name-holder"><?php if ( ! empty($lspb_stored_data['contact-name']) ) echo esc_attr( $lspb_stored_data['contact-name'][0] ); ?></div>
 				<div class="corp-position-holder"><?php if ( ! empty($lspb_stored_data['contact-position']) ) echo esc_attr( $lspb_stored_data['contact-position'][0] ); ?></div>

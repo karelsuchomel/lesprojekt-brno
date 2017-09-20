@@ -1108,6 +1108,7 @@ footer.site-footer .footer-column p {
 }
 footer.site-footer .footer-column p a {
   color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
 }
 footer.site-footer .footer-column p a:hover, footer.site-footer .footer-column p aactive {
   color: white;

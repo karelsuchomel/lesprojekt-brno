@@ -212,15 +212,6 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-.content-contacts .contact-card-wrap .card-col:nth-of-type(1) {
-  padding-left: 17px;
-}
-.content-contacts .contact-card-wrap img {
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
-  width: 50px;
-  height: auto;
-}
 .content-contacts .contact-card-wrap .name-holder {
   font-weight: 600;
 }
@@ -272,6 +263,9 @@
             transform: translateX(50%) translateY(0px);
     opacity: 1;
   }
+  .content-contacts .corporate-info-table {
+    padding: 17px 0px;
+  }
 }
 @media screen and (max-width: 640px) {
   .content-contacts {
@@ -287,21 +281,17 @@
   .content-contacts h2.cont-list-headline {
     font-size: 14px;
     line-height: 21px;
+    margin-top: 5px;
   }
   .content-contacts .contact-card-wrap {
     font-size: 13px;
     line-height: 18px;
     padding: 8px 0px;
+    overflow: hidden;
   }
   .content-contacts .contact-card-wrap .card-col {
     width: -webkit-calc(50% - 20px);
     width: calc(50% - 20px);
-  }
-  .content-contacts .contact-card-wrap .card-col:nth-of-type(1) {
-    padding-left: 8px;
-  }
-  .content-contacts .contact-card-wrap img {
-    width: 40px;
   }
   .content-contacts .contact-card-wrap .email-holder {
     font-size: 12px;
