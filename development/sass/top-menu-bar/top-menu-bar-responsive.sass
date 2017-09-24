@@ -1,21 +1,17 @@
 @media screen and(max-width: 1180px)
 	.menu-content
 		#home-page-link
-			margin-left: 51px
+			margin-left: 34px
 
 	#menu-top-bar-container
-		margin-right: 34px // 120 + 17 + 17
+		margin-right: 34px
 
 @media screen and(max-width: 920px)
 	#menu-top-bar-container
 		ul li	a
-			padding: 15px 8px
+			padding: 0px 12px
 
-			// text
-			font-size: 13px
-			line-height: 20px
-
-@media screen and(max-width: 760px)
+@media screen and(max-width: 780px)
 	#top-menu-bar
 		position: relative
 
@@ -72,13 +68,12 @@
 					padding-left: 34px
 
 					// text
-					font-size: 14px
+					font-size: 13px
 					line-height: 20px
 
 			li.current-menu-item
 				a
-					background: lighten(#3B4323, 45%)
-					color: #3B4323
+					background: #EFEFEF
 
 	#menu-toggle
 		&:checked ~ #menu-top-bar-container
@@ -89,3 +84,15 @@
 
 	#show-mobile-menu
 		display: block
+
+@media screen and(max-width: 640px)
+	.menu-content
+		#home-page-link
+			margin-left: 0px
+
+		#show-mobile-menu .icon
+			margin-right: 17px
+
+		#menu-top-bar-container
+			ul li a
+				padding-left: 17px

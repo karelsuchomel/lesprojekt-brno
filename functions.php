@@ -22,7 +22,8 @@ function lesprojekt_brno_theme_setup(){
 
 	// navigation menus
 	register_nav_menus(array(
-		'menu-top-bar' => __('Top bar menu'),
+		'menu-top-bar' => 'Top bar menu',
+		'footer-navigation' => 'Footer navigation',
 	));
 
 	// add featured image support

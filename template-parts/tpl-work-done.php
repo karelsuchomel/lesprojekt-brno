@@ -8,9 +8,24 @@
 
 <?php require_once('navigation/top-menu-bar.php');?>
 
+<div class="page-header-image"
+	<?php 
+		if ( has_post_thumbnail() )
+		{
+			$postID = get_post();
+			$postThumbURI = get_the_post_thumbnail_url( get_the_ID(), 'large' ); 
+
+			echo "style='background-image: url(" . $postThumbURI . ");'";
+		}
+	?>
+></div>
 <div class="content-work-done clear-both">
+	<div class="page-heading-container">
+		<div class="heading-blurred-bg" <?php echo "style='background-image: url(" . $postThumbURI . ");'"; ?>></div>
+		<div class="heaeding-bg-tint"></div>
+		<h1>Úplný seznam LHP a LHO zpracovaných od roku 1998</h1>
+	</div>
 	<div class="list-wrap">
-	<h1>Úplný seznam LHP a LHO zpracovaných od roku 1998</h1>
 	<ul>
 
 	<?php 
@@ -42,7 +57,7 @@
 	}
 	?>
 
-		<li><strong><?php if ( ! empty($lspb_stored_data['project-type']) ) echo esc_attr( $lspb_stored_data['project-type'][0] ); ?></strong><span class="project-name-wrap"><?php if ( ! empty($lspb_stored_data['project-name']) ) echo esc_attr( $lspb_stored_data['project-name'][0] ); ?></span></li>
+		<li><span class="project-type-wrap"><?php if ( ! empty($lspb_stored_data['project-type']) ) echo esc_attr( $lspb_stored_data['project-type'][0] ); ?></span><span class="project-name-wrap"><?php if ( ! empty($lspb_stored_data['project-name']) ) echo esc_attr( $lspb_stored_data['project-name'][0] ); ?></span></li>
 
 	<?php endwhile; ?>
 	</div>

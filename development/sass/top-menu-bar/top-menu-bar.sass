@@ -8,9 +8,8 @@ $border-color: #CCC
 
 	// text
 	font-family: 'Open Sans', sans-serif
-	color: #333
+	color: #555
 	text-decoration: none
-	text-transform: uppercase
 
 	&:hover
 		transition: 0.2s
@@ -20,8 +19,8 @@ $border-color: #CCC
 	position: relative
 	z-index: 2
 	top: 0
-	transition: background 0.2s
 	background: white
+	transition: background 0.2s
 
 .menu-content
 	box-shadow: 0px 5px 5px -5px rgba(0,0,0,0.4)
@@ -30,7 +29,7 @@ $border-color: #CCC
 
 	#home-page-link
 		float: left
-		margin-left: 154px // 120 + 34
+		margin-left: 137px // 120 + 17
 
 		// text
 		color: #3B4323
@@ -38,6 +37,14 @@ $border-color: #CCC
 		line-height: 50px
 		font-weight: 700
 		text-decoration: none
+		padding: 0px 17px
+
+		&:hover
+			color: #5D6A37
+			transition: 0.2s
+
+		&:active
+			background: #EFEFEF
 
 #menu-toggle
 	display: none
@@ -48,18 +55,20 @@ $border-color: #CCC
 	cursor: pointer
 	padding-left: 17px
 
+	font-weight: 600
+	font-size: 13px
 	line-height: 50px
-	font-size: 14px
+	color: #555
 
 	&:hover
 		span
-			color: #3B4323
+			color: #222
 		.icon .line
 			transition: 0.2s
-			background: #65743C
+			background: #222
 
 	&:active
-		background: #DDD
+		background: #EFEFEF
 
 	.icon
 		width: 25px
@@ -71,7 +80,7 @@ $border-color: #CCC
 
 		.line
 			width: 100%
-			height: 4px
+			height: 3px
 			background: #3B4323
 			box-sizing: border-box
 		.line.first
@@ -115,22 +124,24 @@ $border-color: #CCC
 			a
 				@extend .top-bar-menu-item
 				position: relative
-				transition: none !important
 				z-index: 0
 				user-select: none
-				box-shadow: -1px 0px 0px #DDD
-				border-right: 1px solid #DDD
+				background-color: none
 
 				// text
-				font-weight: 400
-				font-size: 14px
+				font-weight: 600
+				font-size: 13px
 				line-height: 50px
 
 				&:hover
-					transition: 0.2s
+					transition: color 0.2s
+					color: #222
 
 				&:active
-					background: #DDD
+					background: #EFEFEF
+
+		li.current-menu-item
+			background: #EFEFEF
 
 		li.current-menu-item
 			&:before

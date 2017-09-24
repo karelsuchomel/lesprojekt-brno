@@ -13,97 +13,150 @@
 	animation-duration: 0.5s
 	animation-fill-mode: forwards
 
-#content
+.page-header-image
+	height: 200px
 	background:
-		image: url('../images/work-done-bg.jpg')
+		size: cover
 		position: 0px 0px
 
+.page-heading-container
+	display: inline-block
+	bottom: -3px
+	position: relative
+	overflow: hidden
+	box-shadow: 0px -5px 5px -5px rgba(0, 0, 0, 0.4)
 
-.content-work-done
-	margin: 0 auto
-	max-width: calc(100% - 240px)
-	.list-wrap
-		margin-bottom: 34px
-		max-width: 550px
-		max-height: 850px
-		box-sizing: border-box
-		font-size: 14px
-		padding: 34px 34px 34px
+	.heading-blurred-bg
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		transform: scaleY(2) scaleX(1.4)
+		filter: blur(10px)
 
-		background:
-			image: url('../images/work-done-bg-blur.jpg')
-			position: -120px 0px
+		// background
+		background-position: -120px -100px
+
+	.heaeding-bg-tint
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		background: rgba(255,255,255,0.65)
 
 	h1
-		font-weight: 400
-		font-size: 14px
-		line-height: 21px
-		margin: 0px 0px 10px
+		font-weight: 700
+		font-size: 16px
+		line-height: 30px
+		padding: 10px 34px
+		margin: 0px
+		color: #333
 
 		// animation
 		@extend .showUp-animation-defaults
+
+.content-work-done
+	margin: 0 auto
+	margin-bottom: 54px
+	margin-top: -100px
+	padding: 0px 120px 68px
+
+	.list-wrap
+		box-sizing: border-box
+		font-size: 14px
+		padding: 34px 34px 34px
+		background-color: white
+		box-shadow: 0px -5px 5px -5px rgba(0, 0, 0, 0.4)
+
+		// text
+		color: #333
 
 	ul
 		list-style: none
 		margin: 0px
 		padding: 0px
-		max-height: 660px
+		max-height: calc(100vh - 250px)
 		overflow-y: scroll
 		position: relative
 
+		> div
+			margin-bottom: 34px
+			&:after
+				content: ""
+				display: block
+				clear: both
+
+
 		h3
-			padding: 10px
-			margin: 0px
+			font-size: 13px
+			font-weight: 700
+			padding: 10px 0px
+			margin: 0px 0px 17px
 			position: sticky
 			top: 0px
-			border: 1px solid #DDD
-			border-bottom: 0px
-			background: #F3F3F1
-			box-shadow: 0px 1px 5px -2px rgba(0, 0, 0, 0.4)
+			border-bottom: 1px solid #DDD
+			background: white
 
 		li
-			padding: 5px 5px 5px 10px
-			border-top: 1px solid #DDD
-			border-right: 1px solid #DDD
-			border-left: 1px solid #DDD
-			box-shadow: 0px 1px 0px #DDD
-			&:nth-of-type(2n)
-				background: rgba(255,255,255,0.5)
+			display: block
+			float: left
+			width: 50%
+			box-sizing: border-box
+			overflow: hidden
+
+			padding: 4px 8px
+			line-height: 25px
+			background: #EFEFEF
+
+			&:nth-of-type(4n + 3), &:nth-of-type(4n + 4)
+				background: white
 			span.project-name-wrap
 				margin-left: 17px
+			span.project-type-wrap
+				font-weight: 700
 
-@media screen and(max-width: 780px)
+@media screen and(max-width: 920px)
 	.content-work-done
 		max-width: 100%
-		padding: 0px 34px
+		padding: 64px 17px
 
 		.list-wrap
 			max-width: none
 			padding: 34px
-
-			background-position: -34px 0px
-
-		h1
-
-		ul
+			background-position: -17px -64px
 
 @media screen and(max-width: 640px)
 	.content-work-done
 		padding: 0px 0px
+		background: none
 
 		.list-wrap
 			padding: 17px
 			margin-bottom: 0px
-
+			background: white
 			background-position: 0px 0px
 
 		h1
-			font-weight: 400
-			font-size: 12px
-			line-height: 18px
-			margin: 0px 0px 5px
+			font-size: 14px
+			line-height: 21px
+			margin: 5px 0px 10px
 
 		ul
+			overflow-y: visible
 			h3
 				font-size: 14px
 				line-height: 21px
+
+			li
+				padding: 0px 8px
+				font-size: 13px
+				line-height: 22px
+				width: 100%
+
+				&:nth-of-type(4n + 3), &:nth-of-type(4n + 4)
+					background: white
+
+				&:nth-of-type(2n + 2)
+					background: #EEE

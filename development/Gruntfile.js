@@ -89,13 +89,13 @@ module.exports = function(grunt) {
     'ftp-deploy' : {
       build: {
         auth: {
-          host: 'ftp.esm-altoetting.de',
+          host: 'ftp.lesprojekt-brno.cz',
           port: 21,
           authKey: 'key1'
         },
         src: ['../'],
-        dest: 'wp-content/themes/esm-altoetting/',
-        exclusions: [ '../development', '../.gitignore', '../cmd2', '../.git']
+        dest: 'new/wp-content/themes/lesprojekt-brno/',
+        exclusions: [ '../development', '../.gitignore', '../.git']
       }
     }
   });

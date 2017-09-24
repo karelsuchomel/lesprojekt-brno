@@ -1,33 +1,43 @@
-footer.site-footer
+ul#footer-navigation-container
 	background:
 		image: url('../images/footer-bg-blurred.png')
 		size: cover
 		position: center
 	padding: 68px 154px
+	margin: 0px
 	display: flex
 	justify-content: space-between
 	flex-wrap: wrap
+	list-style: none
 
-	.footer-column
+	> li
 		display: block
 		margin-right: 17px
+		padding: 0px
+
+		&:last-of-type
+			margin-right: 0px
 
 		// text
 		color: white
 		font-size: 14px
 		line-height: 21px
 
-		h2
+		> a
+			color: white
 			margin: 5px 0px
 			font-size: 14px
 			line-height: 18px
 			font-weight: 700
+			text-decoration: none
 
-		p
+		> ul
 			margin: 5px 0px
+			padding: 0px
 			color: rgba(255,255,255,0.8)
+			list-style: none
 
-			a
+			li a
 				color: rgba(255,255,255,0.8)
 				text-decoration: none
 				&:hover, &active
@@ -35,30 +45,19 @@ footer.site-footer
 					text-decoration: underline
 					cursor: pointer
 
-@media screen and(max-width: 960px)
-	footer.site-footer
-		padding: 50px
-
+@media screen and(max-width: 1180px)
+	ul#footer-navigation-container
+		padding: 51px
 
 @media screen and(max-width: 900px)
-	footer.site-footer
+	ul#footer-navigation-container
 		padding: 34px
 
-		p.footer-column
-			margin-right: 34px
-
-		p.social-links
-			position: absolute
-			top: 34px
-			right: 34px
-			margin-right: 0px
-
 @media screen and(max-width: 760px)
-	footer.site-footer
-		padding: 20px 17px
+	ul#footer-navigation-container
+		padding: 22px 17px
 
 @media screen and(max-width: 640px)
-	footer.site-footer
-
-		.footer-column
+	ul#footer-navigation-container
+		> li
 			width: 100%

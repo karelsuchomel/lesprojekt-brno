@@ -17,7 +17,7 @@
 			'post_type' => 'contact',
 			'posts_per_page' => '1000',
 			'orderby' => 'title',
-			'order' => 'DESC'
+			'order' => 'ASC'
 		);
 		$my_query = new WP_Query( $args );
 
@@ -28,8 +28,12 @@
 
 		<li class="contact-card-wrap">
 			<div class="card-col">
-				<div class="name-holder"><?php if ( ! empty($lspb_stored_data['contact-name']) ) echo esc_attr( $lspb_stored_data['contact-name'][0] ); ?></div>
-				<div class="corp-position-holder"><?php if ( ! empty($lspb_stored_data['contact-position']) ) echo esc_attr( $lspb_stored_data['contact-position'][0] ); ?></div>
+				<div class="name-holder">
+					<?php if ( ! empty($lspb_stored_data['contact-personal-title']) ) echo esc_attr( $lspb_stored_data['contact-personal-title'][0] . " " ); ?><?php if ( ! empty($lspb_stored_data['contact-name']) ) echo esc_attr( $lspb_stored_data['contact-name'][0] ); ?>
+				</div>
+				<div class="corp-position-holder">
+					<?php if ( ! empty($lspb_stored_data['contact-position']) ) echo esc_attr( $lspb_stored_data['contact-position'][0] ); ?>
+				</div>
 			</div>
 			<div class="card-col">
 				<div class="email-holder"><a href="mailto:<?php if ( ! empty($lspb_stored_data['contact-mail']) ) echo esc_attr( $lspb_stored_data['contact-mail'][0] ); ?>"><?php if ( ! empty($lspb_stored_data['contact-mail']) ) echo esc_attr( $lspb_stored_data['contact-mail'][0] ); ?></a></div>
