@@ -95,11 +95,7 @@ module.exports = function(grunt) {
         },
         src: ['../'],
         dest: 'new/wp-content/themes/lesprojekt-brno/',
-<<<<<<< HEAD
         exclusions: [ '../development', '../.gitignore', '../.git']
-=======
-        exclusions: [ '../development', '../.gitignore', '../cmd2', '../.git']
->>>>>>> bb4385bb17cfbd9003c2bcf0160e837923ea95d4
       }
     }
   });
