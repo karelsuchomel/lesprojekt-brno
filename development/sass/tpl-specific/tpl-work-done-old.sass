@@ -1,0 +1,114 @@
+@keyframes showUp
+	from
+		opacity: 0
+		transform: translateY(15px)
+	to
+		opacity: 1
+		transform: translateY(0px)
+
+.showUp-animation-defaults
+	opacity: 0
+	transform: translateY(15px)
+	animation-name: showUp
+	animation-duration: 0.5s
+	animation-fill-mode: forwards
+
+#content
+	padding: 0px
+
+.content-work-done
+	padding: 0px 120px
+	margin: 0 auto 34px
+	background:
+		image: url('../images/work-done-bg.jpg')
+		position: 0px 0px
+
+	.list-wrap
+		margin-bottom: 34px
+		max-width: 550px
+		max-height: 850px
+		box-sizing: border-box
+		font-size: 14px
+		padding: 34px 34px 34px
+
+		background:
+			image: url('../images/work-done-bg-blur.jpg')
+			position: -120px 0px
+
+	h1
+		font-weight: 400
+		font-size: 14px
+		line-height: 21px
+		margin: 0px 0px 10px
+
+		// animation
+		@extend .showUp-animation-defaults
+
+	ul
+		list-style: none
+		margin: 0px
+		padding: 0px
+		max-height: 660px
+		overflow-y: scroll
+		position: relative
+
+		h3
+			padding: 10px
+			margin: 0px
+			position: sticky
+			top: 0px
+			border: 1px solid #DDD
+			border-bottom: 0px
+			background: #F3F3F1
+			box-shadow: 0px 1px 5px -2px rgba(0, 0, 0, 0.4)
+
+		li
+			padding: 5px 5px 5px 10px
+			border-top: 1px solid #DDD
+			border-right: 1px solid #DDD
+			border-left: 1px solid #DDD
+			box-shadow: 0px 1px 0px #DDD
+			&:nth-of-type(2n)
+				background: rgba(255,255,255,0.5)
+			span.project-name-wrap
+				margin-left: 17px
+
+@media screen and (max-width: 1180px)
+	.content-work-done
+		padding: 0px 50px
+
+@media screen and (max-width: 780px)
+	.content-work-done
+		padding: 0px 34px
+
+		.list-wrap
+			max-width: none
+			padding: 34px
+
+			background-position: -34px 0px
+
+		h1
+
+		ul
+
+@media screen and(max-width: 640px)
+	.content-work-done
+		padding: 0px 0px
+		margin-bottom: 0px 
+
+		.list-wrap
+			padding: 17px
+			margin-bottom: 0px
+
+			background-position: 0px 0px
+
+		h1
+			font-weight: 400
+			font-size: 12px
+			line-height: 18px
+			margin: 0px 0px 5px
+
+		ul
+			h3
+				font-size: 14px
+				line-height: 21px

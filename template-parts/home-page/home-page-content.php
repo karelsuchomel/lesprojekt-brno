@@ -1,7 +1,7 @@
 <?php
 // retrieve path to card's blurred background
 $cardBGImageURL = get_bloginfo('template_url') . "/assets/images/tree-trunk-bg-minified.jpg";
-$cardBGblurredImageURL = get_bloginfo('template_url') . "/assets/images/tree-trunk-bg-blurred-darker.jpg";
+$cardBGblurredImageURL = get_bloginfo('template_url') . "/assets/images/tree-trunk-bg-blurred.jpg";
 ?>
 
 <div class="front-card-container" style="background-image: url('<?php echo $cardBGImageURL; ?>');">
