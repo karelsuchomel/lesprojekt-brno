@@ -9,7 +9,30 @@
     <!-- Links-->
     <!-- Fonts-->
     <!-- font-family: Open+Sans - 300, 400, 600, 700, 800 -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800&amp;subset=latin-ext" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800&amp;subset=latin-ext" rel="stylesheet">
+    <!-- font-family: Lora - 400, 400i, 700 -->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700&amp;subset=latin-ext" rel="stylesheet"> 
     <?php wp_head(); ?>
   </head>
 <body <?php body_class(); ?>>
+
+<?php
+global $post;
+$currentPageID = $post->ID;
+$featuredImageID = get_post_meta( $currentPageID, "_thumbnail_id", true );
+if ( $featuredImageID !== "" ) {
+    $attachement = get_post( $featuredImageID );
+    $attachementURI = $attachement->guid;
+    //echo "style='background-image: url(" . $attachementURI . ");'";
+
+    ?>
+
+    <style>
+    .footer-container .footer-background-blurred {
+        background-image: url(" <?php echo $attachementURI; ?> ");
+    }
+    </style>
+
+    <?php
+}
+?>

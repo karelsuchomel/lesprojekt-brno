@@ -1,14 +1,51 @@
+.footer-container
+	padding: 0px 120px 0px
+	position: relative
+	z-index: 0
+	box-shadow: inset 0px 3px 5px -5px rgba(0, 0, 0, 0.4)
+	overflow: hidden
+
+	// bacgkground
+	background-size: cover
+	background-position: 0px 100%
+
+	.footer-background-blurred
+		position: absolute
+		z-index: 1
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		filter: blur(5px)
+		transform: scaleY(1.25) scaleX(1.1)
+
+		// background
+		background-position: 0px 100%
+		
+	.footer-background-tint
+		position: absolute
+		z-index: 2
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		background: rgba(0,0,0,0.2)
+
+.footer-content
+	padding: 34px
+	position: relative
+	overflow: hidden
+
 ul#footer-navigation-container
-	background:
-		image: url('../images/footer-bg-blurred.png')
-		size: cover
-		position: center
-	padding: 68px 154px
+	position: relative
+	z-index: 3
+	padding: 0px
 	margin: 0px
 	display: flex
 	justify-content: space-between
 	flex-wrap: wrap
 	list-style: none
+
 
 	> li
 		display: block
@@ -34,11 +71,11 @@ ul#footer-navigation-container
 		> ul
 			margin: 5px 0px
 			padding: 0px
-			color: rgba(255,255,255,0.8)
+			color: white
 			list-style: none
 
 			li a
-				color: rgba(255,255,255,0.8)
+				color: white
 				text-decoration: none
 				&:hover, &active
 					color: white
@@ -46,18 +83,21 @@ ul#footer-navigation-container
 					cursor: pointer
 
 @media screen and(max-width: 1180px)
-	ul#footer-navigation-container
-		padding: 51px
+	.footer-container
+		padding: 0px 50px
 
-@media screen and(max-width: 900px)
-	ul#footer-navigation-container
-		padding: 34px
+@media screen and(max-width: 780px)
+	.footer-container
+		padding: 0px 17px
 
-@media screen and(max-width: 760px)
-	ul#footer-navigation-container
-		padding: 22px 17px
+	.footer-content
+		padding: 34px 17px
 
 @media screen and(max-width: 640px)
+	.footer-container
+		padding: 0px
+
 	ul#footer-navigation-container
 		> li
 			width: 100%
+			margin-bottom: 17px

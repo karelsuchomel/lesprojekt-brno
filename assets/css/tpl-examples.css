@@ -5,6 +5,14 @@
 #example-items-container {
   padding: 54px 120px;
 }
+#example-items-container .additional-note {
+  color: #222;
+  font-size: 14px;
+  line-height: 24px;
+  clear: both;
+  border-top: 1px solid #DDD;
+  padding: 34px;
+}
 #example-items-container .item-wrap {
   width: 30%;
   box-sizing: border-box;
@@ -30,7 +38,7 @@
 #example-items-container .item-wrap .item-text-field-wrap h2 {
   margin: 0px;
   margin-bottom: 5px;
-  font-size: 18px;
+  font-size: 16px;
 }
 #example-items-container .item-wrap .item-text-field-wrap .example-details {
   display: none;
@@ -72,6 +80,9 @@
 @media screen and (max-width: 640px) {
   #example-items-container {
     padding: 17px;
+  }
+  #example-items-container .additional-note {
+    padding: 34px 0px;
   }
   #example-items-container .item-wrap {
     width: 100%;

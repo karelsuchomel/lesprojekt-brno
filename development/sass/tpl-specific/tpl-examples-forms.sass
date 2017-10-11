@@ -3,6 +3,16 @@
 
 #example-items-container
 	padding: 75px 120px
+
+	.additional-note
+		// text
+		color: #222
+		font-size: 14px
+		line-height: 24px
+		clear: both
+		border-top: 1px solid #DDD
+		padding: 34px
+
 	.item-wrap
 		position: relative
 		width: 30%
@@ -50,6 +60,10 @@
 				.example-annotation
 					display: none
 
+.economy-book #example-items-container .item-wrap
+	img
+		padding: 0px
+		margin-top: 70px
 
 @media screen and(max-width: 1180px)
 	#example-items-container
@@ -76,6 +90,8 @@
 @media screen and(max-width: 640px)
 	#example-items-container
 		padding: 17px
+		.additional-note
+			padding: 34px 0px
 		.item-wrap
 			width: 100%
 			margin-right: 0px

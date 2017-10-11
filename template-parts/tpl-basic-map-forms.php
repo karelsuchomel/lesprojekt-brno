@@ -32,7 +32,7 @@
 		$lspb_stored_data = get_post_meta( get_the_ID() );
 		?>
 
-		<div class="item-wrap" style="background-image: url('');">
+		<div class="item-wrap">
 			<div class="item-text-field-wrap">
 				<h2><?php if ( ! empty($lspb_stored_data['example-name']) ) echo esc_attr( $lspb_stored_data['example-name'][0] ); ?></h2>
 				<span class="example-annotation">
@@ -51,6 +51,11 @@
 
 		//get_term_link();
 		?>
+		<?php if ( !$currentPageContent == "") { ?>
+		<div class="additional-note">
+			<?php echo $currentPageContent; ?>
+		</div>
+		<?php }?>
 	</div>
 </div>
 

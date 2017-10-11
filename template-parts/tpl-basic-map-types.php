@@ -50,6 +50,11 @@
 
 		//get_term_link();
 		?>
+		<?php if ( !$currentPageContent == "") { ?>
+		<div class="additional-note">
+			<?php echo $currentPageContent; ?>
+		</div>
+		<?php }?>
 	</div>
 </div>
 

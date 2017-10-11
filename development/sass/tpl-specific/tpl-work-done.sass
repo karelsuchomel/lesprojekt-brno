@@ -1,72 +1,15 @@
-@keyframes showUp
-	from
-		opacity: 0
-		transform: translateY(15px)
-	to
-		opacity: 1
-		transform: translateY(0px)
-
-.showUp-animation-defaults
-	opacity: 0
-	transform: translateY(15px)
-	animation-name: showUp
-	animation-duration: 0.5s
-	animation-fill-mode: forwards
-
-.page-header-image
-	height: 200px
-	background:
-		size: cover
-		position: 0px 0px
-
-.page-heading-container
-	display: inline-block
-	bottom: -3px
-	position: relative
-	overflow: hidden
-	box-shadow: 0px -5px 5px -5px rgba(0, 0, 0, 0.4)
-
-	.heading-blurred-bg
-		position: absolute
-		top: 0
-		right: 0
-		bottom: 0
-		left: 0
-		transform: scaleY(2) scaleX(1.4)
-		filter: blur(10px)
-
-		// background
-		background-position: -120px -100px
-
-	.heaeding-bg-tint
-		position: absolute
-		top: 0
-		right: 0
-		bottom: 0
-		left: 0
-		background: rgba(255,255,255,0.65)
-
-	h1
-		font-weight: 700
-		font-size: 16px
-		line-height: 30px
-		padding: 10px 34px
-		margin: 0px
-		color: #333
-
-		// animation
-		@extend .showUp-animation-defaults
+@import "../animations"
 
 .content-work-done
 	margin: 0 auto
-	margin-bottom: 54px
+	margin-bottom: 50px
 	margin-top: -100px
 	padding: 0px 120px 68px
 
 	.list-wrap
 		box-sizing: border-box
 		font-size: 14px
-		padding: 34px 34px 34px
+		padding: 34px
 		background-color: white
 		box-shadow: 0px -5px 5px -5px rgba(0, 0, 0, 0.4)
 
@@ -77,7 +20,7 @@
 		list-style: none
 		margin: 0px
 		padding: 0px
-		max-height: calc(100vh - 250px)
+		max-height: calc(90vh)
 		overflow-y: scroll
 		position: relative
 
@@ -117,37 +60,38 @@
 			span.project-type-wrap
 				font-weight: 700
 
-@media screen and(max-width: 920px)
+@media screen and(max-width: 1180px)
 	.content-work-done
-		max-width: 100%
-		padding: 64px 17px
+		padding: 0px 50px 50px
 
-		.list-wrap
-			max-width: none
-			padding: 34px
-			background-position: -17px -64px
+@media screen and(max-width: 780px)
+	.page-heading-container h1
+		padding: 10px 17px
+		font-size: 14px
+		line-height: 24px
 
-@media screen and(max-width: 640px)
 	.content-work-done
-		padding: 0px 0px
-		background: none
+		padding: 0px 17px 34px
 
 		.list-wrap
 			padding: 17px
-			margin-bottom: 0px
-			background: white
-			background-position: 0px 0px
 
-		h1
-			font-size: 14px
-			line-height: 21px
-			margin: 5px 0px 10px
+@media screen and(max-width: 640px)
+	.page-heading-container
+		display: block
+		bottom: 0px
+
+		.heading-blurred-bg
+			filter: blur(10px)
+			// background
+			background-size: cover
+			background-position: 0px -100px
+
+	.content-work-done
+		padding: 0px 0px
 
 		ul
 			overflow-y: visible
-			h3
-				font-size: 14px
-				line-height: 21px
 
 			li
 				padding: 0px 8px
@@ -156,7 +100,7 @@
 				width: 100%
 
 				&:nth-of-type(4n + 3), &:nth-of-type(4n + 4)
-					background: white
+					background: #EFEFEF
 
 				&:nth-of-type(2n + 2)
-					background: #EEE
+					background: white
