@@ -10,8 +10,8 @@ function homePageFrontCardParagraph1() {
 function homePageFrontCardParagraph2() {
 	echo get_theme_mod('lsp-home-page-content-50-2-paragraph');
 }
-function contactPageContactsList() {
-	echo get_theme_mod('lsp-contact-page-contacts-list');
+function contactPageContactCard() {
+	echo get_theme_mod('lsp-contact-page-contact-card');
 }
 
 // add customize option to various page elements
@@ -103,34 +103,33 @@ Naše společnost zpracovala v letech 1996 – 2016 lesní hospodářské plány
 			'render_callback'     => 'homePageFrontCardParagraph2',
 		) );
 
-		$wp_customize->add_setting('lsp-contact-page-contacts-list', array(
+		$wp_customize->add_setting('lsp-contact-page-contact-card', array(
 			'default' => '
-<h2>Kontakty</h2>
-<ul>
-<li>Josef Pelikán</li>
-<li>Jiří Šťastný</li>
-<li>Veronika Veselá</li>
-<li>Jiří Šťastný</li>
-<li>Josef Pelikán</li>
-<li>Veronika Veselá</li>
-<li>Josef Pelikán</li>
-<li>Jiří Šťastný</li>
-<li>Veronika Veselá</li>
-</ul>',
+<h2 class="corporate-info-headline">LESPROJEKT BRNO, a.s.</h2>
+<span>Jezuitská 14/13, Brno 602 00<br>Společnost je zapsána v OR u KS Brno,<br> oddíl B, vložka 1976</span>
+<hr>
+<span>
+<strong>Kontakt</strong><br>
+Tel.: +420 724 717 203<br>
+E-mail: info@lesprojekt-brno.cz<br>
+Fax: 542 513 258<br><br>
+IČ: 65279191<br>
+DIČ: CZ65279191<br>
+</span>',
 			'transport' => 'postMessage'
 		));
 
-	$wp_customize->add_control( new WP_Customize_Control($wp_customize, 'lsp-contact-page-contacts-list-control', array(
-			'label' => 'Výpis kontaktů',
+	$wp_customize->add_control( new WP_Customize_Control($wp_customize, 'lsp-contact-page-contact-card-control', array(
+			'label' => 'Kontakty detail',
 			'section' => 'lsp-edit-contacts-page',
-			'settings' => 'lsp-contact-page-contacts-list',
+			'settings' => 'lsp-contact-page-contact-card',
 			'type' => 'textarea'
 		)) );
 
-	$wp_customize->selective_refresh->add_partial( 'lsp-contact-page-contacts-list', array(
-			'selector'            => '.devider-50-50:nth-of-type(2)',
+	$wp_customize->selective_refresh->add_partial( 'lsp-contact-page-contact-card', array(
+			'selector'            => '.corporate-info-table',
 			'container_inclusive' => false,
-			'render_callback'     => 'contactPageContactsList',
+			'render_callback'     => 'contactPageContactCard',
 		) );
 
 }

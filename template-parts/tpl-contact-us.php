@@ -30,7 +30,7 @@
 	 
 	//php mailer variables
 	$to = get_option('admin_email');
-	$subject = "Z webového formuláře lesprojekt-brno.cz ".get_bloginfo('name');
+	$subject = "Z webového formuláře lesprojekt-brno.cz - " . $name;
 	$headers = 'From: '. $email . "\r\n" .
 	  'Reply-To: ' . $email . "\r\n";
 
@@ -112,8 +112,8 @@
 		<div id="respond">
 		<?php echo $response; ?>
 			<form action="<?php the_permalink(); ?>" method="post">
-				<p><label for="name">Jméno: <span>*</span> <br><input type="text" name="message_name" value="<?php echo esc_attr($name); ?>"></label></p>
-				<p><label for="message_email">Email: <span>*</span> <br><input type="text" name="message_email" value="<?php echo esc_attr($email); ?>"></label></p>
+				<p><label for="name">Vaše jméno: <span>*</span> <br><input type="text" name="message_name" value="<?php echo esc_attr($name); ?>"></label></p>
+				<p><label for="message_email">Váš email: <span>*</span> <br><input type="text" name="message_email" value="<?php echo esc_attr($email); ?>"></label></p>
 				<p><label for="message_text">Zpráva: <span>*</span> <br><textarea rows="8" cols="50" type="text" name="message_text"><?php echo esc_textarea($message); ?></textarea></label></p>
 				<p><label for="message_human">Antispam ověření: <span>*</span> <br><input type="text" style="width: 60px;" name="message_human"> + 3 = 5</label></p>
 				<input type="hidden" name="submitted" value="1">

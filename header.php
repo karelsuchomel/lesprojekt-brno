@@ -19,17 +19,14 @@
 <?php
 global $post;
 $currentPageID = $post->ID;
-$featuredImageID = get_post_meta( $currentPageID, "_thumbnail_id", true );
-if ( $featuredImageID !== "" ) {
-    $attachement = get_post( $featuredImageID );
-    $attachementURI = $attachement->guid;
-    //echo "style='background-image: url(" . $attachementURI . ");'";
+$blurImgID = get_post_meta( $currentPageID, "_wp_attached_file_blur", true );
+if ( $blurImgID !== "" ) {
 
     ?>
 
     <style>
     .footer-container .footer-background-blurred {
-        background-image: url(" <?php echo $attachementURI; ?> ");
+        background-image: url("<?php echo $blurImgID; ?>");
     }
     </style>
 

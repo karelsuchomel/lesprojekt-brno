@@ -62,17 +62,7 @@
 		</div>
 
 		<div class="corporate-info-table">
-			<h2 class="corporate-info-headline">LESPROJEKT BRNO, a.s.</h2>
-			<span>Jezuitská 14/13, Brno 602 00<br>Společnost je zapsána v OR u KS Brno,<br> oddíl B, vložka 1976</span>
-			<hr>
-			<span>
-			<strong>Kontakt</strong><br>
-			Tel.: +420 724 717 203<br>
-			E-mail: info@lesprojekt-brno.cz<br>
-			Fax: 542 513 258<br><br>
-			IČ: 65279191<br>
-			DIČ: CZ65279191<br>
-			</span>
+			<?php echo get_theme_mod('lsp-contact-page-contact-card'); ?>
 		</div>
 	</div>
 </div>

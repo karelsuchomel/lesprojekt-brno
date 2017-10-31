@@ -39,7 +39,7 @@
 				<?php if ( ! empty($lspb_stored_data['example-annotation']) ) echo esc_attr( $lspb_stored_data['example-annotation'][0] ); ?>
 				</span>
 				<span class="example-details">
-				<?php if ( ! empty($lspb_stored_data['example-details']) ) echo esc_attr( $lspb_stored_data['example-details'][0] ); ?>
+				<?php if ( ! empty($lspb_stored_data['example-details']) ) echo $lspb_stored_data['example-details'][0]; ?>
 				</span>
 			</div>
 		</div>
