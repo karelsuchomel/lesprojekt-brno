@@ -1,8 +1,6 @@
 #content
 	background-color: white
 
-.content-examples
-
 #example-items-container
 	padding: 54px 120px
 
@@ -16,6 +14,7 @@
 		padding: 34px
 
 	.item-wrap
+		position: relative
 		width: 30%
 		box-sizing: border-box
 		height: 250px
@@ -31,6 +30,29 @@
 		&:nth-of-type(3n)
 			margin-right: 0px
 
+		&:hover, &:active
+			.open-detail-symbol
+				transform: scale(1)
+				opacity: 1
+
+		.open-detail-symbol
+			opacity: 0
+			transform: scale(0)
+			position: absolute
+			bottom: 10px
+			right: 10px
+			transition: ease-in-out 0.2s
+			cursor: pointer
+
+			&:hover, &:active
+				transform: scale(1.2)
+
+		input
+			display: none
+
+		input:checked + .item-detail-canvas
+			display: block
+
 		.item-text-field-wrap
 			background-color: rgba(255,255,255,0.9)
 			border: 1px solid black
@@ -43,21 +65,77 @@
 				margin-bottom: 5px
 				font-size: 16px
 
-			.example-details
-				display: none
+@keyframes showUP
+	from
+		transform: translateX(-50%) translateY(-50%) scale(0.8)
+		opacity: 0
+	to
+		transform: translateX(-50%) translateY(-50%) scale(1)
+		opacity: 1
 
-				p
-					margin: 0px
-					margin-bottom: 5px
+.item-detail-canvas
+	display: none
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0 
+	z-index: 100
+	.item-detail-wrap
+		background-color: white
+		position: fixed
+		padding-bottom: 17px
+		box-shadow: 2px 3px 5px 2px rgba(0,0,0,0.2) 
+		width: 720px
+		max-width: calc(100% - 34px)
+		max-height: 100vh
+		overflow-y: auto
+		box-sizing: border-box
+		overflow: hidden
+		height: auto
+		top: 50%
+		left: 50%
+		transform: translateX(-50%) translateY(-50%) scale(0.8)
+		opacity: 0
+		animation: showUP 0.2s forwards
 
-		&:hover, &:active
-			.item-text-field-wrap
-				position: relative
-				z-index: 100
-				.example-details
-					display: inline
-				.example-annotation
-					display: none
+		img
+			display: block
+			margin: 0 auto 25px
+			max-width: 100%
+			height: auto
+
+		h2
+			padding: 0px 34px
+			margin: 34px 0px 5px
+
+		.example-details p
+			padding: 0px 34px
+			margin: 12px 0px
+
+		.close-icon
+			position: absolute
+			//display: block
+			top: 0px
+			right: 0px
+			opacity: 1
+			transform: scale(1)
+
+			.close-detail-symbol
+				transition: ease-in-out 0.2s
+				cursor: pointer
+
+				&:hover, &:active
+					transform: scale(1.2)
+
+	.bg
+		display: block
+		position: fixed
+		background-color: rgba(0,0,0,0.5)
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0 
 
 @media screen and(max-width: 1180px)
 	#example-items-container
@@ -90,5 +168,9 @@
 		.item-wrap
 			width: 100%
 			margin-right: 0px
+
+			.open-detail-symbol
+				opacity: 1
+				transform: scale(1)
 
 @import "tpl-examples-header"

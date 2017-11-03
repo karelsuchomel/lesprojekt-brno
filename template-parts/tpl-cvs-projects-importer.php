@@ -29,7 +29,7 @@ function importCVSasProjects()
 	{
 		while (($data = fgetcsv($handle, 1000, ",")) !== FALSE)
 		{
-			// $data[0] = name of the Project, $data[1] = LHP/LHO
+			// $data[0] = name of the Project, $data[1] = LHP/LHO, $data[2] = 0
 			$postarr = array(
 				"post_date" => $_POST["lsp_project_date"],
 				"post_title" => $data[0],
@@ -40,8 +40,17 @@ function importCVSasProjects()
 					"project-type" => $data[1]
 				),
 			);
-			wp_insert_post( $postarr );
-			echo "posted project with name: ".$data[0]." and type: ".$data[1]."<br>";
+			$newPostID = wp_insert_post( $postarr );
+			// "project-importance" => $data[2]
+
+			if ( isset( $data[2] ) )
+			{
+				update_post_meta( $newPostID, 'project-importance', sanitize_text_field( $data[2] ) );
+			} else {
+				echo "couldn't upload meta data -> meta data is missing.";
+			}
+
+			echo "posted project with name: ".$data[0]." ,type: ".$data[1]." ,importance: ".$data[2]."<br>";
 		}
 	fclose($handle);
 	}

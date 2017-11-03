@@ -35,14 +35,17 @@
 	'meta_query' => array(
 		'project-type' => array(
 			'key' => 'project-type',
-		),		
+		),
+		'project-importance' => array(
+			'key' => 'project-importance',
+		),	
 	),
 	'orderby' => array(
-								'date' => 'DESC',
-								'project-type' => 'DESC',
-								'project-importance' => 'DESC',
-								'title' => 'ASC',
-							),
+		'date' => 'DESC',
+		'project-type' => 'DESC',
+		'project-importance' => 'DESC',
+		'title' => 'ASC',
+	),
 	'order' => 'DESC'
 	);
 	$my_query = new WP_Query( $args );

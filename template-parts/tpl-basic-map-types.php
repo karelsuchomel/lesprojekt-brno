@@ -27,24 +27,43 @@
 		);
 		$my_query = new WP_Query( $args );
 
+		$idCounter = 1;
+
 		while ( $my_query->have_posts() ) : $my_query->the_post();
 
 		$lspb_stored_data = get_post_meta( get_the_ID() );
 		?>
 
 		<div class="item-wrap" style="background-image: url('<?php the_post_thumbnail_url( "large" )?>');">
+			<label for="toggle-detail-check-box-<?php echo $idCounter;?>">
+				<img class="open-detail-symbol" src="<?php bloginfo('template_directory');?>/assets/images/plus-symbol.svg">
+			</label>
 			<div class="item-text-field-wrap">
 				<h2><?php if ( ! empty($lspb_stored_data['example-name']) ) echo esc_attr( $lspb_stored_data['example-name'][0] ); ?></h2>
 				<span class="example-annotation">
 				<?php if ( ! empty($lspb_stored_data['example-annotation']) ) echo esc_attr( $lspb_stored_data['example-annotation'][0] ); ?>
 				</span>
-				<span class="example-details">
-				<?php if ( ! empty($lspb_stored_data['example-details']) ) echo $lspb_stored_data['example-details'][0]; ?>
-				</span>
+				<input type="checkbox" id="toggle-detail-check-box-<?php echo $idCounter;?>">
+				<div class="item-detail-canvas">
+					<label class="bg" for="toggle-detail-check-box-<?php echo $idCounter;?>"></label>
+					<div class="item-detail-wrap">
+						<label class="close-icon" for="toggle-detail-check-box-<?php echo $idCounter;?>">
+							<img class="close-detail-symbol" src="<?php bloginfo('template_directory');?>/assets/images/close-symbol.svg">
+						</label>
+						<img src="<?php the_post_thumbnail_url( "large" )?>">
+						<h2><?php if ( ! empty($lspb_stored_data['example-name']) ) echo esc_attr( $lspb_stored_data['example-name'][0] ); ?></h2>
+						<span class="example-details">
+						<?php if ( ! empty($lspb_stored_data['example-details']) ) echo $lspb_stored_data['example-details'][0]; ?>
+						</span>
+					</div>
+				</div>
 			</div>
 		</div>
 
-		<?php endwhile; ?>
+		<?php 
+		$idCounter++;
+		endwhile; 
+		?>
 
 		<?php
 
