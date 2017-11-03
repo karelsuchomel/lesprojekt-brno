@@ -115,7 +115,7 @@
 				<p><label for="name">Vaše jméno: <span>*</span> <br><input type="text" name="message_name" value="<?php echo esc_attr($name); ?>"></label></p>
 				<p><label for="message_email">Váš email: <span>*</span> <br><input type="text" name="message_email" value="<?php echo esc_attr($email); ?>"></label></p>
 				<p><label for="message_text">Zpráva: <span>*</span> <br><textarea rows="8" cols="50" type="text" name="message_text"><?php echo esc_textarea($message); ?></textarea></label></p>
-				<p><label for="message_human">Antispam ověření: <span>*</span> <br><input type="text" style="width: 60px;" name="message_human"> + 3 = 5</label></p>
+				<p><label for="message_human">Antispam ověření (do pole vyplňte dvojku): <span>*</span> <br><input type="text" style="width: 60px;" name="message_human"> + 3 = 5</label></p>
 				<input type="hidden" name="submitted" value="1">
 			<p><input type="submit" value="Odeslat zprávu"></p>
 			</form>
