@@ -5,7 +5,7 @@
 <?php if ( has_post_thumbnail() ) : ?>
 	<?php
 		$postID = get_post();
-		$postThumbURI = get_the_post_thumbnail_url( get_the_ID(), 'full' ); 
+		$postThumbURI = get_the_post_thumbnail_url( get_the_ID(), 'large' ); 
 	?>
 
 	style="background-image: url(<?php echo $postThumbURI ?>);"

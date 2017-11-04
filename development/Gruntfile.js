@@ -94,7 +94,7 @@ module.exports = function(grunt) {
           authKey: 'key1'
         },
         src: ['../'],
-        dest: 'new/wp-content/themes/lesprojekt-brno/',
+        dest: 'wp-content/themes/lesprojekt-brno/',
         exclusions: [ '../development', '../.gitignore', '../.git']
       }
     }
